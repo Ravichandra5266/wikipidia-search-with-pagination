@@ -1,0 +1,125 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 20px;
+}
+.wiki-search-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wiki-logo {
+  margin-bottom: 10px;
+  width: 150px;
+}
+
+.search-input {
+  font-size: 18px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #d5cdcd;
+  border-radius: 3px;
+  padding: 10px;
+  width: 100%;
+  outline: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  .search-input {
+    width: 400px;
+  }
+}
+
+.wikipedia-data-list-container {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 70vh;
+  padding: 0px;
+}
+
+.each-data {
+  border: 1px solid #d5cdcd;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
+  width: 90%;
+}
+
+.heading {
+  font-family: Roboto;
+  font-size: 22px;
+  font-weight: bold;
+}
+@media screen and (min-width: 768px) {
+  .heading {
+    font-size: 28px;
+  }
+}
+.para {
+  color: #444444;
+  font-size: 15px;
+}
+@media screen and (min-width: 768px) {
+  .para {
+    font-size: 18px;
+  }
+}
+
+.link {
+  color: #006621;
+  text-decoration: none;
+  font-family: Roboto;
+  font-size: 14px;
+}
+@media screen and (min-width: 768px) {
+  .link {
+    font-size: 18px;
+  }
+}
+.page-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin-top: auto;
+  margin: 15px;
+}
+.pageno {
+  font-family: Roboto;
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+}
+.prev {
+  border: 1px solid #3287a8;
+  cursor: pointer;
+  height: 40px;
+  width: 80px;
+  border-radius: 5px;
+  background-color: #3287a8;
+  margin-right: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: Roboto;
+}
+.next {
+  border: 1px solid #3287a8;
+  cursor: pointer;
+  height: 40px;
+  width: 80px;
+  border-radius: 5px;
+  background-color: #3287a8;
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: Roboto;
+}
