@@ -102,7 +102,7 @@ function wikipediaSearch(event) {
   } else if (event.key === "Enter") {
     displayresultsEl.textContent = "";
     currentPage = 1;
-    const url = `https://api.ccbp.in/wiki-search?search=${searchInputValue}`;
+    const url = `https://apis.ccbp.in/wiki-search?search=${searchInputValue}`;
     const options = {
       method: "get",
     };
