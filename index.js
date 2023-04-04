@@ -102,7 +102,7 @@ function wikipediaSearch(event) {
   } else if (event.key === "Enter") {
     displayresultsEl.textContent = "";
     currentPage = 1;
-    const url = `https://apis.ccbp.in/wiki-search?search=${searchInputValue}`;
+    const url = `https://api.ccbp.in/wiki-search?search=${searchInputValue}`;
     const options = {
       method: "get",
     };
@@ -120,7 +120,11 @@ function wikipediaSearch(event) {
         displayData();
       })
       .catch(() => {
-        console.log("hello");
+        const apiError = document.createElement("p");
+        apiError.textContent = "Api Or Network Error Pls Check";
+        apiError.classList.add("empty");
+        displayresultsEl.appendChild(apiError);
+        console.log(apiError);
       });
   }
 }
