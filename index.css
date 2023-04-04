@@ -18,7 +18,7 @@
 }
 
 .search-input {
-  font-size: 18px;
+  font-size: 16px;
   border-style: solid;
   border-width: 1px;
   border-color: #d5cdcd;
@@ -122,4 +122,15 @@
   font-size: 14px;
   font-weight: bold;
   font-family: Roboto;
+}
+.empty {
+  font-size: 14px;
+  font-weight: bold;
+  font-family: Roboto;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .empty {
+    font-size: 18px;
+  }
 }

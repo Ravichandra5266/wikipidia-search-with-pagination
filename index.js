@@ -80,17 +80,28 @@ function displayData() {
   const slicedData = data.slice(startIndex, endIndex);
   spinnerEl.classList.add("d-none");
 
-  for (let each of slicedData) {
-    displayFetchData(each);
+  if (data.length > 0) {
+    for (let each of slicedData) {
+      displayFetchData(each);
+    }
+    pagination();
+  } else {
+    const emptyData = document.createElement("p");
+    emptyData.textContent =
+      "Search Results Are Not Found Pls Try Different Key Word";
+    emptyData.classList.add("empty");
+    displayresultsEl.appendChild(emptyData);
   }
-  pagination();
 }
 
 function wikipediaSearch(event) {
-  if (event.key === "Enter") {
+  const searchInputValue = searchInputEl.value;
+
+  if (searchInputValue === "" && event.key === "Enter") {
+    alert("Please Enter Valid Search Input");
+  } else if (event.key === "Enter") {
     displayresultsEl.textContent = "";
     currentPage = 1;
-    const searchInputValue = searchInputEl.value;
     const url = `https://apis.ccbp.in/wiki-search?search=${searchInputValue}`;
     const options = {
       method: "get",
@@ -104,7 +115,12 @@ function wikipediaSearch(event) {
         let { search_results } = responseData;
         data = search_results;
 
+        console.log(responseData);
+
         displayData();
+      })
+      .catch(() => {
+        console.log("hello");
       });
   }
 }
