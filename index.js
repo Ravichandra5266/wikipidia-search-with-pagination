@@ -3,7 +3,7 @@ const displayresultsEl = document.getElementById("displayresults");
 const spinnerEl = document.getElementById("spinner");
 
 let currentPage = 1;
-let limitPages = 6;
+let limitPages = 5;
 let totalPages = null;
 let data = null;
 
